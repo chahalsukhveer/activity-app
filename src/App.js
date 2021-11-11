@@ -30,10 +30,9 @@ function App() {
   return (
     <div className="container">
         <Header subtitle="Workout for mind & boyy"></Header>
-        {console.log(name)}
         <ActivitySelector setName={setName} ></ActivitySelector>
         <div className="row">
-          <ActivityList activities={activities}></ActivityList>
+          <ActivityList activities={activities} selectedName={name}></ActivityList>
         </div>
         <Footer footerText="It is awesome app"></Footer>
     </div>

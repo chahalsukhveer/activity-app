@@ -1,4 +1,5 @@
-const ActivityList = ({activities}) => { 
+const ActivityList = ({activities,selectedName}) => { 
+    const selectedActivities = selectedName ? activities.filter((activity) => activity.name === selectedName) : activities;
     return (  
         <>
             <div className="col-8">
@@ -11,7 +12,7 @@ const ActivityList = ({activities}) => {
                     </tr>
                     </thead>
                     <tbody>
-                        {activities.map((activity, index) => (
+                        {selectedActivities.map((activity, index) => (
                             <tr key={index}>
                                 <td>{activity.name}</td>
                                 <td>{activity.duration}</td>
