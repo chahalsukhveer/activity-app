@@ -3,30 +3,19 @@ import Header from './header/header';
 import Footer from './footer';
 import ActivityList from './activity-list';
 import ActivitySelector from './activity-selector';
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 function App() {
-  const activities = [{
-    "name":"Running",
-    "duration":"45 mins",
-    "time":"Monday 7pm"
-   },
-   {
-       "name":"Cycling",
-       "duration":"1 hr",
-       "time":"Tuesday 2pm"
-      },
-      {
-       "name":"Yoga",
-       "duration":"45 mins",
-       "time":"Monday 9am"
-      },
-      {
-        "name":"Meditation",
-        "duration":"45 mins",
-        "time":"Friday 7pm"
-       }]
-       const [name, setName] =useState("");
+  const [activities, setActivities] =useState([]);
+  const [name, setName] =useState("");
+
+  useEffect(() =>{
+    async function fecthData(){
+      const response = await (await fetch('/activities.json')).json();
+      setActivities(response);
+    }
+   fecthData();
+  },[])
   return (
     <div className="container">
         <Header subtitle="Workout for mind & boyy"></Header>
