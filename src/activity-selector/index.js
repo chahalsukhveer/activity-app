@@ -6,7 +6,7 @@ const ActivitySelector = ({setName}) => {
         <>
          <div className="row">
         <div className="col-md-6"></div>
-        <div className="col-md-6">
+        <div className="col-md-2">
         <form>
             <label htmlFor="name">
                 Search activity: 
