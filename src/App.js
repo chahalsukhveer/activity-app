@@ -9,7 +9,7 @@ import AddActivity from './add-activity';
 function App() {
   const [activities, setActivities] =useState([]);
   const [name, setName] =useState("");
-  // Add here boolean to hide show Add activity form, hint: useState
+  const [addActivity, setAddActivity] =useState(false);
 
   useEffect(() =>{
     async function fecthData(){
@@ -18,9 +18,8 @@ function App() {
     }
    fecthData();
   },[]);
-const addActivityClick = () =>{
-
-}
+const addActivityClick = () => {setAddActivity(!addActivity)};
+const handleAddActivity = (activity) =>{activities.push(activity)}
 
   return (
     <div className="container">
@@ -32,10 +31,7 @@ const addActivityClick = () =>{
           </div>
           <div className="col-4">
              <button id="addActivity" onClick={addActivityClick}>Add new activity</button>
-             {/*
-             Use boolean property to hide/show add activity form
-              Pass property activities  */}
-             <AddActivity></AddActivity>
+             {addActivity ? <AddActivity handleAddActivity={handleAddActivity} setAddActivity={setAddActivity}></AddActivity> : ''}
           </div>
         </div>
         <Footer footerText="It is awesome app"></Footer>
