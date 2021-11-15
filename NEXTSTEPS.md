@@ -1,0 +1,1 @@
+Checkout add-activity-selector-exercise branch and follow instructions inside EXERCISE.md
