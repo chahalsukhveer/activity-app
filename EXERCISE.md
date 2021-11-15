@@ -1,4 +1,4 @@
-## Add activity selector
+## Add activity selector (https://reactjs.org/docs/forms.html#the-select-tag)
 * Add folder activity-selector inside src and add Functional component named ActivitySelector.
 
 * Create select input with predefined options 
