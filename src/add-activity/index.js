@@ -1,7 +1,10 @@
 const AddActivity = () => {
     console.log("Add activity");
+    /** Add here state props using useStateHook. 
+     * Hint:  use Object e.g 
+     * const [item, setItem] = useState({id:"", value:""})
+     */
     return ( 
-        
         <>
         <p>Uncomment form to start final exercise!!</p>
             {/* <form className="mt-2">
