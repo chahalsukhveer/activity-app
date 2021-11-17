@@ -10,15 +10,15 @@ const AddActivity = () => {
             {/* <form className="mt-2">
                 <div className="form-group">
                     <label labelFor="name">Name</label>
-                    <input type="text" className="form-control" value={name} placeholder="Name" id="name" onChange={onChange}></input>
+                    <input type="text" className="form-control" value={newActivitySession.name} placeholder="Name" id="name" onChange={onChange}></input>
                 </div>  
                 <div className="form-group">
                     <label labelFor="duration">Duration</label>
-                    <input type="text" className="form-control" value={duration} placeholder="Duration" id="duration" onChange={onChange}></input>
+                    <input type="text" className="form-control" value={newActivitySession.duration} placeholder="Duration" id="duration" onChange={onChange}></input>
                 </div> 
                 <div className="form-group">
                     <label labelFor="time">Time</label>
-                    <input type="text" className="form-control" value={time} placeholder="Time" id="time" onChange={onChange}></input>
+                    <input type="text" className="form-control" value={newActivitySession.time} placeholder="Time" id="time" onChange={onChange}></input>
                 </div>   
                 <button
                     className="btn btn-primary mt-2"
