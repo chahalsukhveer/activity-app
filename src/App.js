@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   return (
     <div className="container">
-        <Header subtitle="Workout for mind & boyy"></Header>
+        <Header subtitle="Workout for mind & body"></Header>
         <div className="row">
           
         </div>
