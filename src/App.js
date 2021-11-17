@@ -8,6 +8,7 @@ import AddActivity from './add-activity';
 
 function App() {
   const [activities, setActivities] =useState([]);
+  const [availableActivities, setAvailableActivities] =useState([]);
   const [name, setName] =useState("");
   // Add here boolean to hide/show Add activity form, hint: useState
 
@@ -18,14 +19,24 @@ function App() {
     }
    fecthData();
   },[]);
-const addActivityClick = () =>{
 
-}
+
+  useEffect(() =>{
+    async function fecthData(){
+      const response = await (await fetch('/availableActivities.json')).json();
+      setAvailableActivities(response);
+    }
+   fecthData();
+  },[])
+
+  const addActivityClick = () =>{
+
+  }
 
   return (
     <div className="container">
-        <Header subtitle="Workout for mind & boyy"></Header>
-        <ActivitySelector setName={setName} ></ActivitySelector>
+        <Header subtitle="Workout for mind & body"></Header>
+        <ActivitySelector setName={setName} availableActivities={availableActivities}></ActivitySelector>
         <div className="row">
         <div className="col-8">
           <ActivityList activities={activities} selectedName={name}></ActivityList>
