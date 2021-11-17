@@ -18,7 +18,7 @@ function App() {
   },[])
   return (
     <div className="container">
-        <Header subtitle="Workout for mind & boyy"></Header>
+        <Header subtitle="Workout for mind & body"></Header>
         <ActivitySelector setName={setName} ></ActivitySelector>
         <div className="row">
           <ActivityList activities={activities} selectedName={name}></ActivityList>
